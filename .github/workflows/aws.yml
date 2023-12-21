@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @keyframes orbit1 {
+      0% {
+        transform: rotate(0) translateX(200px) rotate(0);
+      }
+      100% {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+      }
+    }
+    
+    @keyframes orbit2 {
+      0% {
+        transform: rotate(0) translateX(150px) rotate(0);
+      }
+      100% {
+        transform: rotate(-360deg) translateX(150px) rotate(360deg);
+      }
+    }
+    
+    @keyframes orbit3 {
+      0% {
+        transform: rotate(0) translateX(100px) rotate(0);
+      }
+      100% {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+      }
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: black;
+      background-image: radial-gradient(white 1%, transparent 0);
+      background-size: 3px 3px;
+    }
+    
+    .ciao-text {
+      font-size: 3em;
+      color: orange;
+      position: relative;
+    }
+    
+    .planet {
+      position: absolute;
+      border-radius: 50%;
+      background-color: #888;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    
+    .planet1 {
+      width: 30px;
+      height: 30px;
+      animation-name: orbit1;
+      top: 50%;
+      left: 50%;
+      transform-origin: top left;
+      animation-delay: 0s;
+    }
+    
+    .planet2 {
+      width: 45px;
+      height: 45px;
+      animation-name: orbit2;
+      top: 50%;
+      left: 50%;
+      transform-origin: top left;
+      animation-delay: 1s;
+    }
+    
+    .planet3 {
+      width: 60px;
+      height: 60px;
+      animation-name: orbit3;
+      top: 50%;
+      left: 50%;
+      transform-origin: top left;
+      animation-delay: 2s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="ciao-text">Ciao</div>
+    <div class="planet planet1"></div>
+    <div class="planet planet2"></div>
+    <div class="planet planet3"></div>
+  </div>
+</body>
+</html>
